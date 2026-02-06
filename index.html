@@ -1881,11 +1881,28 @@
                 }
                 
                 const dishesMap = new Map();
-                const restaurantMap = new Map();
-                
-                dishes.forEach(dish => {
-                    // Check if dish matches ZIP code
-                    const matchesZip = checkDishMatchesZip(dish, zipCode);
+const restaurantMap = new Map();
+
+dishes.forEach(dish => {
+  // RENAME COLUMNS: underscore → camelCase
+  const formattedDish = {
+    id: dish.id,
+    name: dish.name,
+    description: dish.description,
+    price: dish.price,
+    category: dish.category,
+    cuisine: dish.cuisine,
+    calories: dish.calories,
+    imageUrl: dish.image_url,  // CHANGED
+    restaurantId: dish.restaurant_id,  // CHANGED
+    restaurantName: dish.restaurant_name,  // CHANGED
+    restaurantZip: dish.restaurant_zip,  // CHANGED
+    status: dish.status,
+    isActive: dish.is_active  // CHANGED
+  };
+  
+  // Check if dish matches ZIP code
+  const matchesZip = checkDishMatchesZip(formattedDish, zipCode);
                     
                     if (matchesZip) {
                         // Log dish info for debugging
@@ -3005,3 +3022,4 @@
 </body>
 
 </html>
+
