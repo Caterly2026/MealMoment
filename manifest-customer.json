@@ -1,0 +1,48 @@
+{
+  "name": "MealMoment - Fresh Food Delivery",
+  "short_name": "MealMoment",
+  "description": "Fresh meals delivered based on your local time. Breakfast, lunch, and dinner specials from local restaurants.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2E7D32",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["food", "lifestyle", "shopping"],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "MealMoment Main Interface"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Order Now",
+      "short_name": "Order",
+      "description": "Place a new food order",
+      "url": "./?source=homescreen"
+    },
+    {
+      "name": "View Cart",
+      "short_name": "Cart",
+      "description": "View your current order",
+      "url": "./#cart"
+    }
+  ]
+}
